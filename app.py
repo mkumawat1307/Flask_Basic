@@ -8,11 +8,11 @@ app=Flask(__name__)
 
 @app.route('/')
 def home():
-    return "<h2>Hello, World!</h2>"
+    return  render_template('home.html')
 
 @app.route('/welcome')
 def welcome():
-    return "Welcome to the Flask Tutorials"
+    return "<a href= '"+ url_for('calculate')+ "'>calculate</a>"
 
 @app.route('/index')
 def index():
